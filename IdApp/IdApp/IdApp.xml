@@ -136,11 +136,6 @@
             Set start time of inactivity
             </summary>
         </member>
-        <member name="M:IdApp.App.ClearStartInactivityTime">
-            <summary>
-            Clears the conditions of checking inactivity
-            </summary>
-        </member>
         <member name="M:IdApp.App.IsInactivitySafeIntervalPassed">
             <summary>
             Performs a check whether 5 minutes of inactivity interval has been passed
@@ -8172,7 +8167,7 @@
         </member>
         <member name="P:IdApp.Pages.Main.Security.SecurityViewModel.CanEnableScreenCapture">
             <summary>
-            Gets or sets whether the identity is approved or not.
+            If Screen Capture can be enabled.
             </summary>
         </member>
         <member name="F:IdApp.Pages.Main.Security.SecurityViewModel.CanDisableScreenCaptureProperty">
@@ -8182,7 +8177,7 @@
         </member>
         <member name="P:IdApp.Pages.Main.Security.SecurityViewModel.CanDisableScreenCapture">
             <summary>
-            Gets or sets whether the identity is approved or not.
+            If Screen Capture can be disabled.
             </summary>
         </member>
         <member name="P:IdApp.Pages.Main.Security.SecurityViewModel.ChangePinCommand">
@@ -15520,7 +15515,7 @@
         </member>
         <member name="T:IdApp.Pages.Wallet.MyTokens.MyTokensNavigationArgs">
             <summary>
-            Holds navigation parameters specific to the eDaler wallet.
+            Holds navigation parameters for viewing tokens.
             </summary>
         </member>
         <member name="M:IdApp.Pages.Wallet.MyTokens.MyTokensNavigationArgs.#ctor">
@@ -16807,7 +16802,7 @@
         </member>
         <member name="M:IdApp.Pages.Wallet.ServiceProviders.ServiceProviderModel.#ctor(Waher.Networking.XMPP.Contracts.IServiceProvider)">
             <summary>
-            Contact Information model, including related notification information.
+            Service Provider information model, including related notification information.
             </summary>
             <param name="ServiceProvider">Contact information.</param>
         </member>
@@ -16925,7 +16920,7 @@
         </member>
         <member name="T:IdApp.Pages.Wallet.ServiceProviders.ServiceProvidersNavigationArgs">
             <summary>
-            Holds navigation parameters specific to the eDaler wallet.
+            Holds navigation parameters for selecting a service provider.
             </summary>
         </member>
         <member name="M:IdApp.Pages.Wallet.ServiceProviders.ServiceProvidersNavigationArgs.#ctor">

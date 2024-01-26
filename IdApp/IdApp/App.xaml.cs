@@ -576,7 +576,7 @@ namespace IdApp
 
 			await this.Shutdown(false, false);
 
-			this.SetStartInactivityTime();
+			SetStartInactivityTime();
 		}
 
 		internal static async Task Stop()
@@ -1067,7 +1067,7 @@ namespace IdApp
 #else
 			bool IsDebug = false;
 #endif
-			if (!IsDebug)
+			if (!IsDebug || Force)
 			{
 				ITagProfile Profile = Instantiate<ITagProfile>();
 				if (!Profile.HasPin)
@@ -1075,7 +1075,10 @@ namespace IdApp
 
 				bool NeedToVerifyPin = IsInactivitySafeIntervalPassed();
 
-				if (!displayedPinPopup && (Force || NeedToVerifyPin))
+				if (displayedPinPopup)
+					return false;
+
+				if (Force || NeedToVerifyPin)
 					return await InputPin(Profile) is not null;
 			}
 
@@ -1135,7 +1138,7 @@ namespace IdApp
 
 			if (Profile.ComputePinHash(Pin) == Profile.PinHash)
 			{
-				ClearStartInactivityTime();
+				SetStartInactivityTime();
 				SetCurrentPinCounter(0);
 				await Instance.loginAuditor.UnblockAndReset(Constants.Pin.RemoteEndpoint);
 				await PopupNavigation.Instance.PopAsync();
@@ -1144,16 +1147,18 @@ namespace IdApp
 			else
 			{
 				await Instance.loginAuditor.ProcessLoginFailure(Constants.Pin.RemoteEndpoint,
-						Constants.Pin.Protocol, DateTime.Now, Constants.Pin.Reason);
+					Constants.Pin.Protocol, DateTime.Now, Constants.Pin.Reason);
 
 				PinAttemptCounter++;
 				SetCurrentPinCounter(PinAttemptCounter);
 			}
 
-			long RemainingAttempts = Constants.Pin.MaxPinAttempts - PinAttemptCounter;
+			long RemainingAttempts = Math.Max(0, Constants.Pin.MaxPinAttempts - PinAttemptCounter);
 			IUiSerializer Ui = Instantiate<IUiSerializer>();
 
-			await Ui.DisplayAlert(LocalizationResourceManager.Current["ErrorTitle"], string.Format(LocalizationResourceManager.Current["PinIsInvalid"], RemainingAttempts));
+			await Ui.DisplayAlert(LocalizationResourceManager.Current["ErrorTitle"],
+				string.Format(LocalizationResourceManager.Current["PinIsInvalid"], RemainingAttempts));
+
 			await CheckUserBlocking();
 			return Pin;
 		}
@@ -1185,17 +1190,9 @@ namespace IdApp
 		/// <summary>
 		/// Set start time of inactivity
 		/// </summary>
-		private void SetStartInactivityTime()
+		private static void SetStartInactivityTime()
 		{
 			savedStartTime = DateTime.Now;
-		}
-
-		/// <summary>
-		/// Clears the conditions of checking inactivity
-		/// </summary>
-		private static void ClearStartInactivityTime()
-		{
-			savedStartTime = DateTime.MaxValue;
 		}
 
 		/// <summary>
@@ -1204,8 +1201,7 @@ namespace IdApp
 		/// <returns>True if 5 minutes has been passed and False if has not been passed</returns>
 		private static bool IsInactivitySafeIntervalPassed()
 		{
-			return DateTime.Now.Subtract(savedStartTime).TotalMinutes
-				> Constants.Pin.PossibleInactivityInMinutes;
+			return DateTime.Now.Subtract(savedStartTime).TotalMinutes > Constants.Pin.PossibleInactivityInMinutes;
 		}
 
 		/// <summary>
