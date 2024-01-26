@@ -28,7 +28,6 @@ namespace IdApp.Controls.MainTabBar
 			OnPlatform<string> fontFamily = (OnPlatform<string>)Application.Current.Resources["FontAwesomeSolid"];
 			this.LeftButton1FontFamily = fontFamily;
 			this.LeftButton2FontFamily = fontFamily;
-			this.CenterButtonFontFamily = fontFamily;
 			this.RightButton1FontFamily = fontFamily;
 			this.RightButton2FontFamily = fontFamily;
 
@@ -36,19 +35,16 @@ namespace IdApp.Controls.MainTabBar
 
 			this.LeftButton1.SetBinding(Button.CommandProperty, new Binding(nameof(this.LeftButton1Command), source: this));
 			this.LeftButton2.SetBinding(Button.CommandProperty, new Binding(nameof(this.LeftButton2Command), source: this));
-			this.CenterButton.SetBinding(Button.CommandProperty, new Binding(nameof(this.CenterButtonCommand), source: this));
 			this.RightButton1.SetBinding(Button.CommandProperty, new Binding(nameof(this.RightButton1Command), source: this));
 			this.RightButton2.SetBinding(Button.CommandProperty, new Binding(nameof(this.RightButton2Command), source: this));
 
 			this.LeftButton1.SetBinding(Button.FontFamilyProperty, new Binding(nameof(this.LeftButton1FontFamily), source: this));
 			this.LeftButton2.SetBinding(Button.FontFamilyProperty, new Binding(nameof(this.LeftButton2FontFamily), source: this));
-			this.CenterButton.SetBinding(Button.FontFamilyProperty, new Binding(nameof(this.CenterButtonFontFamily), source: this));
 			this.RightButton1.SetBinding(Button.FontFamilyProperty, new Binding(nameof(this.RightButton1FontFamily), source: this));
 			this.RightButton2.SetBinding(Button.FontFamilyProperty, new Binding(nameof(this.RightButton2FontFamily), source: this));
 
 			this.LeftButton1.SetBinding(Button.TextProperty, new Binding(nameof(this.LeftButton1Text), source: this));
 			this.LeftButton2.SetBinding(Button.TextProperty, new Binding(nameof(this.LeftButton2Text), source: this));
-			this.CenterButton.SetBinding(Button.TextProperty, new Binding(nameof(this.CenterButtonText), source: this));
 			this.RightButton1.SetBinding(Button.TextProperty, new Binding(nameof(this.RightButton1Text), source: this));
 			this.RightButton2.SetBinding(Button.TextProperty, new Binding(nameof(this.RightButton2Text), source: this));
 
@@ -101,20 +97,6 @@ namespace IdApp.Controls.MainTabBar
 			set => this.SetValue(LeftButton2CommandProperty, value);
 		}
 
-		/// <summary>
-		/// See <see cref="CenterButtonCommand"/>
-		/// </summary>
-		public static readonly BindableProperty CenterButtonCommandProperty =
-			BindableProperty.Create(nameof(CenterButtonCommand), typeof(ICommand), typeof(MainTabBarView), default(ICommand));
-
-		/// <summary>
-		/// The command to bind to for the second button.
-		/// </summary>
-		public ICommand CenterButtonCommand
-		{
-			get => (ICommand)this.GetValue(CenterButtonCommandProperty);
-			set => this.SetValue(CenterButtonCommandProperty, value);
-		}
 
 		/// <summary>
 		/// See <see cref="RightButton1Command"/>
@@ -176,20 +158,7 @@ namespace IdApp.Controls.MainTabBar
 			set => this.SetValue(LeftButton2FontFamilyProperty, value);
 		}
 
-		/// <summary>
-		/// See <see cref="CenterButtonFontFamily"/>
-		/// </summary>
-		public static readonly BindableProperty CenterButtonFontFamilyProperty =
-			BindableProperty.Create(nameof(CenterButtonFontFamily), typeof(string), typeof(MainTabBarView), default(string));
 
-		/// <summary>
-		/// The font family to use for text on the second button
-		/// </summary>
-		public string CenterButtonFontFamily
-		{
-			get => (string)this.GetValue(CenterButtonFontFamilyProperty);
-			set => this.SetValue(CenterButtonFontFamilyProperty, value);
-		}
 
 		/// <summary>
 		/// See <see cref="RightButton1FontFamily"/>
@@ -251,20 +220,7 @@ namespace IdApp.Controls.MainTabBar
 			set => this.SetValue(LeftButton2TextProperty, value);
 		}
 
-		/// <summary>
-		/// See <see cref="CenterButtonText"/>
-		/// </summary>
-		public static readonly BindableProperty CenterButtonTextProperty =
-			BindableProperty.Create(nameof(CenterButtonText), typeof(string), typeof(MainTabBarView), default(string));
 
-		/// <summary>
-		/// The text to use for text on the second button
-		/// </summary>
-		public string CenterButtonText
-		{
-			get => (string)this.GetValue(CenterButtonTextProperty);
-			set => this.SetValue(CenterButtonTextProperty, value);
-		}
 
 		/// <summary>
 		/// See <see cref="RightButton1Text"/>
@@ -366,13 +322,10 @@ namespace IdApp.Controls.MainTabBar
 			if (!this.isShowing)
 			{
 				this.ToolBarContent.CancelAnimations();
-				this.CenterButton.CancelAnimations();
 				this.isShowing = true;
 				Task translateToolBarTask = this.ToolBarContent.TranslateTo(0, 0, durationInMs, Easing.SinIn);
-				Task translateMiddleButtonTask = this.CenterButton.TranslateTo(0, 0, durationInMs * 2, Easing.SinIn);
 				try
 				{
-					await Task.WhenAll(translateMiddleButtonTask, translateToolBarTask);
 				}
 				catch (TaskCanceledException)
 				{
@@ -393,13 +346,10 @@ namespace IdApp.Controls.MainTabBar
 			if (this.isShowing)
 			{
 				this.isShowing = false;
-				this.CenterButton.CancelAnimations();
 				this.ToolBarContent.CancelAnimations();
-				Task translateMiddleButtonTask = this.CenterButton.TranslateTo(0, 30, durationInMs, Easing.SinOut);
 				Task translateToolBarTask = this.ToolBarContent.TranslateTo(0, this.MainToolBar.Height, durationInMs, Easing.SinOut);
 				try
 				{
-					await Task.WhenAll(translateToolBarTask, translateMiddleButtonTask);
 				}
 				catch (TaskCanceledException)
 				{

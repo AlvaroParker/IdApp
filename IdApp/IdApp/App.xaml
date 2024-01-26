@@ -35,6 +35,8 @@
         <Color x:Key="ForegroundColor">Black</Color>
         <Color x:Key="PendingColor">Salmon</Color>
 
+		<Color x:Key="ShellBackground">White</Color>
+
         <Color x:Key="PageBackgroundColorLightTheme">White</Color>
         <Color x:Key="PageBackgroundColorDarkTheme">#282830</Color>
 
@@ -348,10 +350,10 @@
             <Setter Property="Margin" Value="20"/>
 		</Style>
         <Style x:Key="ShellFrame" TargetType="Frame">
-            <Setter Property="BorderColor"  Value="{AppThemeBinding Light={StaticResource ForegroundColorLightTheme}, Dark={StaticResource ForegroundColorDarkTheme}}" />
-        </Style>
+			<Setter Property="BorderColor"  Value="{AppThemeBinding Light={StaticResource ForegroundColorLightTheme}, Dark={StaticResource ForegroundColorDarkTheme}}" />
+		</Style>
         <Style x:Key="ShellBoxView" TargetType="BoxView">
-            <Setter Property="BackgroundColor"  Value="{AppThemeBinding Light={StaticResource HeadingBackgroundTranslucentLightTheme}, Dark={StaticResource HeadingBackgroundTranslucentDarkTheme}}" />
+            <Setter Property="BackgroundColor"  Value="{AppThemeBinding Light={StaticResource HeadingBackgroundTranslucent}, Dark={StaticResource HeadingBackgroundTranslucentDarkTheme}}" />
         </Style>
         <Style x:Key="ShellLabel" TargetType="Label">
             <Setter Property="TextColor"  Value="{AppThemeBinding Light={StaticResource TextColorLightTheme}, Dark={StaticResource TextColorDarkTheme}}" />

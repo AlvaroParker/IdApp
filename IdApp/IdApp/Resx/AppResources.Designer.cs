@@ -106,7 +106,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A caller has requested access to one of your things. Select how you wish the thing should respond to this type of request..
+        ///   Looks up a localized string similar to A caller has requested access to one of your machines. Select how you wish the thing should respond to this type of request..
         /// </summary>
         internal static string AccessRequestText2 {
             get {
@@ -709,7 +709,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Claim Thing.
+        ///   Looks up a localized string similar to Claim Machine.
         /// </summary>
         internal static string ClaimThing {
             get {
@@ -1231,7 +1231,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A caller has requested to control one of your things. Select how you wish the thing should respond to this type of request..
+        ///   Looks up a localized string similar to A caller has requested to control one of your machines. Select how you wish the machine should respond to this type of request..
         /// </summary>
         internal static string ControlRequestText2 {
             get {
@@ -1474,7 +1474,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you want to delete all provisioning rules for the thing? By doing so, the thing will ask you again for all new events to learn what it is authorized to do..
+        ///   Looks up a localized string similar to Do you want to delete all provisioning rules for the machine? By doing so, the machine will ask you again for all new events to learn what it is authorized to do..
         /// </summary>
         internal static string DeleteRulesQuestion {
             get {
@@ -1546,7 +1546,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disown Thing.
+        ///   Looks up a localized string similar to Disown Machine.
         /// </summary>
         internal static string DisownThing {
             get {
@@ -1555,7 +1555,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you want to disown the thing? This will remove the thing from your list of things, and will permit another to claim the device as theirs..
+        ///   Looks up a localized string similar to Do you want to disown the machine?This will remove the machine from your list of machines, and will permit another to claim the device as theirs..
         /// </summary>
         internal static string DisownThingQuestion {
             get {
@@ -2320,7 +2320,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The following information is made available about the thing whose code you scanned. Choose if you want to attempt to claim this thing as yours, and also if you want to make it publicly searchable in the Thing Registry..
+        ///   Looks up a localized string similar to The following information is made available about the machine whose code you scanned. Choose if you want to attempt to claim this machine as yours, and also if you want to make it publicly searchable in the Thing Registry..
         /// </summary>
         internal static string InformationAboutClaimedThingText {
             get {
@@ -2329,7 +2329,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information about thing.
+        ///   Looks up a localized string similar to Information about machine.
         /// </summary>
         internal static string InformationAboutThing {
             get {
@@ -2338,7 +2338,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The following information is locally available about the thing. Options to interact with the device are presented below..
+        ///   Looks up a localized string similar to The following information is locally available about the machine. Options to interact with the device are presented below..
         /// </summary>
         internal static string InformationAboutThingText {
             get {
@@ -2635,7 +2635,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Make thing public.
+        ///   Looks up a localized string similar to Make machine public.
         /// </summary>
         internal static string MakeThingPublic {
             get {
@@ -2995,7 +2995,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No Things Found..
+        ///   Looks up a localized string similar to No Machines Found..
         /// </summary>
         internal static string NoThingsFound {
             get {
@@ -3013,7 +3013,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Below you can see a list of notifications resulting from interactions with the thing. Press on each one to display more information and options available..
+        ///   Looks up a localized string similar to Below you can see a list of notifications resulting from interactions with the machine. Press on each one to display more information and options available..
         /// </summary>
         internal static string NotificationsText {
             get {
@@ -3103,7 +3103,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Operator does not support Provisioning and Decision Support for things.
+        ///   Looks up a localized string similar to Operator does not support Provisioning and Decision Support for machines.
         /// </summary>
         internal static string OperatorDoesNotSupportProvisioningAndDecisionSupportForThings {
             get {
@@ -4336,7 +4336,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A caller has requested sensor data from one of your things. Select how you wish the thing should respond to this type of request..
+        ///   Looks up a localized string similar to A caller has requested sensor data from one of your machines. Select how you wish the machine should respond to this type of request..
         /// </summary>
         internal static string ReadoutRequestText2 {
             get {
@@ -5677,7 +5677,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thing.
+        ///   Looks up a localized string similar to Machine.
         /// </summary>
         internal static string Thing {
             get {
@@ -5704,7 +5704,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Things.
+        ///   Looks up a localized string similar to Machines.
         /// </summary>
         internal static string Things {
             get {
@@ -5713,7 +5713,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Below are all your things, and things in your contact book. Click on any to interact with that thing..
+        ///   Looks up a localized string similar to Below are all your machines, and machines in your contact book. Click on any to interact with that machine..
         /// </summary>
         internal static string ThingsDescription {
             get {
@@ -6073,7 +6073,7 @@ namespace IdApp.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to claim thing.
+        ///   Looks up a localized string similar to Unable to claim machine.
         /// </summary>
         internal static string UnableToClaimThing {
             get {

@@ -229,7 +229,7 @@
     <value>City</value>
   </data>
   <data name="ClaimThing" xml:space="preserve">
-    <value>Claim Thing</value>
+    <value>Claim Machine</value>
   </data>
   <data name="Class" xml:space="preserve">
     <value>Class</value>
@@ -337,7 +337,7 @@
     <value>Digest</value>
   </data>
   <data name="DisownThing" xml:space="preserve">
-    <value>Disown Thing</value>
+    <value>Disown Machine</value>
   </data>
   <data name="DomainDoesNotFollowEncryptionPolicy" xml:space="preserve">
     <value>{0} does not follow the ubiquitous encryption policy</value>
@@ -445,13 +445,13 @@
     <value>Incomplete</value>
   </data>
   <data name="InformationAboutClaimedThingText" xml:space="preserve">
-    <value>The following information is made available about the thing whose code you scanned. Choose if you want to attempt to claim this thing as yours, and also if you want to make it publicly searchable in the Thing Registry.</value>
+    <value>The following information is made available about the machine whose code you scanned. Choose if you want to attempt to claim this machine as yours, and also if you want to make it publicly searchable in the Thing Registry.</value>
   </data>
   <data name="InformationAboutThing" xml:space="preserve">
-    <value>Information about thing</value>
+    <value>Information about machine</value>
   </data>
   <data name="InformationAboutThingText" xml:space="preserve">
-    <value>The following information is locally available about the thing. Options to interact with the device are presented below.</value>
+    <value>The following information is locally available about the machine. Options to interact with the device are presented below.</value>
   </data>
   <data name="InformationIsMissingOrInvalid" xml:space="preserve">
     <value>Information is missing or invalid</value>
@@ -502,7 +502,7 @@
     <value>My Digital ID</value>
   </data>
   <data name="MakeThingPublic" xml:space="preserve">
-    <value>Make thing public</value>
+    <value>Make machine public</value>
   </data>
   <data name="Manufacturer" xml:space="preserve">
     <value>Manufacturer</value>
@@ -571,7 +571,7 @@
     <value>Not connected to the operator</value>
   </data>
   <data name="NoThingsFound" xml:space="preserve">
-    <value>No Things Found.</value>
+    <value>No Machines Found.</value>
   </data>
   <data name="ObsoleteContract" xml:space="preserve">
     <value>Obsolete contract</value>
@@ -592,7 +592,7 @@
     <value>Operator does not support legal identities and smart contracts</value>
   </data>
   <data name="OperatorDoesNotSupportProvisioningAndDecisionSupportForThings" xml:space="preserve">
-    <value>Operator does not support Provisioning and Decision Support for things</value>
+    <value>Operator does not support Provisioning and Decision Support for machines</value>
   </data>
   <data name="OperatorDoesNotSupportRegisteringNewAccounts" xml:space="preserve">
     <value>The operator {0} does not support registration of new accounts</value>
@@ -958,16 +958,16 @@
     <value>You need to scan a different type of QR Code, one that represents a legal identity</value>
   </data>
   <data name="Thing" xml:space="preserve">
-    <value>Thing</value>
+    <value>Machine</value>
   </data>
   <data name="ThingDisowned" xml:space="preserve">
     <value>This has been successfully disowned. It can now be claimed by a new owner.</value>
   </data>
   <data name="Things" xml:space="preserve">
-    <value>Things</value>
+    <value>Machines</value>
   </data>
   <data name="ThingsDescription" xml:space="preserve">
-    <value>Below are all your things, and things in your contact book. Click on any to interact with that thing.</value>
+    <value>Below are all your machines, and machines in your contact book. Click on any to interact with that machine.</value>
   </data>
   <data name="Timestamp" xml:space="preserve">
     <value>Time stamp</value>
@@ -988,7 +988,7 @@
     <value>Unable to authenticate with {0}</value>
   </data>
   <data name="UnableToClaimThing" xml:space="preserve">
-    <value>Unable to claim thing</value>
+    <value>Unable to claim machine</value>
   </data>
   <data name="UnableToConnectTo" xml:space="preserve">
     <value>Unable to connect to {0}</value>
@@ -1981,10 +1981,10 @@
     <value>Delete Rules</value>
   </data>
   <data name="DeleteRulesQuestion" xml:space="preserve">
-    <value>Do you want to delete all provisioning rules for the thing? By doing so, the thing will ask you again for all new events to learn what it is authorized to do.</value>
+    <value>Do you want to delete all provisioning rules for the machine? By doing so, the machine will ask you again for all new events to learn what it is authorized to do.</value>
   </data>
   <data name="DisownThingQuestion" xml:space="preserve">
-    <value>Do you want to disown the thing? This will remove the thing from your list of things, and will permit another to claim the device as theirs.</value>
+    <value>Do you want to disown the machine?This will remove the machine from your list of machines, and will permit another to claim the device as theirs.</value>
   </data>
   <data name="RemoveFromList" xml:space="preserve">
     <value>Remove from list</value>
@@ -1999,13 +1999,13 @@
     <value>Notifications</value>
   </data>
   <data name="NotificationsText" xml:space="preserve">
-    <value>Below you can see a list of notifications resulting from interactions with the thing. Press on each one to display more information and options available.</value>
+    <value>Below you can see a list of notifications resulting from interactions with the machine. Press on each one to display more information and options available.</value>
   </data>
   <data name="AccessRequest" xml:space="preserve">
     <value>Access Request</value>
   </data>
   <data name="AccessRequestText2" xml:space="preserve">
-    <value>A caller has requested access to one of your things. Select how you wish the thing should respond to this type of request.</value>
+    <value>A caller has requested access to one of your machines. Select how you wish the thing should respond to this type of request.</value>
   </data>
   <data name="Caller" xml:space="preserve">
     <value>Caller</value>
@@ -2047,7 +2047,7 @@
     <value>{0} wants to read data from your device {1}.</value>
   </data>
   <data name="ReadoutRequestText2" xml:space="preserve">
-    <value>A caller has requested sensor data from one of your things. Select how you wish the thing should respond to this type of request.</value>
+    <value>A caller has requested sensor data from one of your machines. Select how you wish the machine should respond to this type of request.</value>
   </data>
   <data name="ReadRequest" xml:space="preserve">
     <value>Readout Request</value>
@@ -2110,7 +2110,7 @@
     <value>Control Request</value>
   </data>
   <data name="ControlRequestText2" xml:space="preserve">
-    <value>A caller has requested to control one of your things. Select how you wish the thing should respond to this type of request.</value>
+    <value>A caller has requested to control one of your machines. Select how you wish the machine should respond to this type of request.</value>
   </data>
   <data name="Fields" xml:space="preserve">
     <value>Fields</value>

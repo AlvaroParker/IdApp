@@ -29,16 +29,14 @@
                                        LeftButton2Command="{Binding Path=ViewMyThingsCommand}"
 									   LeftButton2Overlay="{Binding Path=Left2Overlay}"
 
-									   CenterButtonText="{x:Static resx:FontAwesome.ScanQr}"
-                                       CenterButtonCommand="{Binding Path=ScanQrCodeCommand}"
-
 									   RightButton1Text="{x:Static resx:FontAwesome.Paragraph}"
 									   RightButton1Command="{Binding Path=ViewContractsCommand}"
 									   RightButton1Overlay="{Binding Path=Right1Overlay}"
 
-									   RightButton2Text="{x:Static resx:FontAwesome.Wallet}"
-                                       RightButton2Command="{Binding Path=ViewWalletCommand}"
-									   RightButton2Overlay="{Binding Path=Right2Overlay}"/>
+									   RightButton2Text="{x:Static resx:FontAwesome.ScanQr}"
+                                       RightButton2Command="{Binding Path=ScanQrCodeCommand}"
+
+									   />
             <Grid Grid.Row="0" Margin="{StaticResource DefaultMargin}" VerticalOptions="StartAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -107,13 +105,20 @@
                                         <TapGestureRecognizer Tapped="SharePhoto_Tapped"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Image Grid.Row="1"
-                                       HorizontalOptions="FillAndExpand"
-                                       VerticalOptions="FillAndExpand" Margin="12,0,12,0"
-                                       Aspect="AspectFit"
+								<Frame CornerRadius="6"
+									   Grid.Row="1"
+									   Margin="10"
+									   Padding="0"
+									   >
+                                <Image 
+									   HorizontalOptions="FillAndExpand"
+									   VerticalOptions="FillAndExpand"
+                                       Aspect="AspectFill"
                                        Source="{Binding Path=Image}"
                                        IsVisible="{Binding Path=HasPhoto}"
                                        Rotation="{Binding Path=ImageRotation}"/>
+								</Frame>
+
                                 <Label Grid.Row="1"
                                        HorizontalOptions="CenterAndExpand"
                                        VerticalOptions="CenterAndExpand" FontSize="42"

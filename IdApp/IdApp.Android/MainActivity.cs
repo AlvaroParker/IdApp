@@ -7,6 +7,7 @@ using Android.Nfc;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Graphics;
 using Firebase;
 using IdApp.Android.Nfc;
 using IdApp.Helpers;
@@ -14,6 +15,7 @@ using IdApp.Nfc;
 using IdApp.Services.Nfc;
 using System;
 using System.Collections.Generic;
+using Android.Views.Accessibility;
 
 namespace IdApp.Android
 {
@@ -36,7 +38,7 @@ namespace IdApp.Android
 			ToolbarResource = Resource.Layout.Toolbar;
 
 			base.SetTheme(Resource.Style.MainTheme);
-
+			Window.SetStatusBarColor(Color.Rgb(32, 46, 64));
 			base.OnCreate(SavedInstanceState);
 
 			this.Init(SavedInstanceState);

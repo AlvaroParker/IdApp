@@ -217,9 +217,6 @@
                                            LeftButton2Command="{Binding Path=FlipCommand}"
 										   LeftButton2Overlay="{Binding Path=NrTokenNotifications}"
 
-                                           CenterButtonText="{x:Static resx:FontAwesome.ScanQr}"
-                                           CenterButtonCommand="{Binding Path=ScanQrCodeCommand}"
-
                                            RightButton1Text="{x:Static resx:FontAwesome.HandHolding}"
                                            RightButton1Command="{Binding Path=RequestPaymentCommand}"
 
@@ -286,8 +283,6 @@
                                            LeftButton2Command="{Binding Path=FlipCommand}"
 										   LeftButton2Overlay="{Binding Path=NrBalanceNotifications}"
 
-                                           CenterButtonText="{x:Static resx:FontAwesome.ScanQr}"
-                                           CenterButtonCommand="{Binding Path=ScanQrCodeCommand}"
 
                                            RightButton1Text="{x:Static resx:FontAwesome.StarOfLife}"
                                            RightButton1Command="{Binding Path=CreateTokenCommand}"/>
